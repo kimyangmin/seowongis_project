@@ -26,7 +26,7 @@ export default function App() {
           <Route path="/business/*" element={<Business />} />
 
           {/* Equipment */}
-          <Route path="/equipment" element={<Equipment />} />
+          <Route path="/equipment/equipment" element={<Equipment />} />
 
           {/* News group */}
           <Route path="/news/*" element={<News />} />

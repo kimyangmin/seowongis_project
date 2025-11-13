@@ -231,31 +231,6 @@ ul, li {
   color: #0090ff;
 }
 
-.mega-menu-inner {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-}
-
-.mega-col {
-  flex: 1; /* 모든 컬럼 너비 동일 */
-  padding: 0 40px;
-  position: relative;
-}
-
-/* 각 컬럼 사이 정확히 중앙에 선을 그림 */
-.mega-col:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0; /* 컬럼 오른쪽 끝이 아닌 flex 기준 정확한 중앙 */
-  height: 100%;
-  width: 1px;
-  background-color: #e5e5e5;
-  transform: translateX(20px); /* 간격 조정 */
-}
-
-
 /* ================================================
    FOOTER
 ================================================ */
@@ -269,8 +244,8 @@ ul, li {
 }
 
 .footer-inner {
-  max-width: 1200px;
-  margin: 0 80px;
+  max-width: 1500px;
+  margin: 0 auto;
   padding: 0 20px;
 }
 
