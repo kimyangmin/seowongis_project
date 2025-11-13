@@ -2,12 +2,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
+// pages
 import Home from "./pages/Home";
-import About from "./pages/About";
-import Business from "./pages/Business";
-import Equipment from "./pages/Equipment";
-import News from "./pages/News";
-import Recruit from "./pages/Recruit";
+import About from "./pages/about/About";
+import Business from "./pages/business/Business";
+import Equipment from "./pages/equipment/Equipment";
+import News from "./pages/news/News.jsx";
+import Recruit from "./pages/recruit/Recruit";
 
 export default function App() {
   return (
@@ -17,10 +18,20 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+
+          {/* About group */}
           <Route path="/about/*" element={<About />} />
+
+          {/* Business group */}
           <Route path="/business/*" element={<Business />} />
+
+          {/* Equipment */}
           <Route path="/equipment" element={<Equipment />} />
+
+          {/* News group */}
           <Route path="/news/*" element={<News />} />
+
+          {/* Recruit group */}
           <Route path="/recruit/*" element={<Recruit />} />
         </Routes>
       </main>
