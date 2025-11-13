@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import Nav from "./Nav";
+import logo from "../assets/images/main/logo.png";
 
 export default function Header() {
   return (
@@ -6,13 +8,10 @@ export default function Header() {
       <div className="header">
         <div className="container header-wrap">
 
-          {/* Logo */}
-          <a href="/" className="logo d-inline-flex align-items-center h-100" title="메인으로">
-            <img src="/assets/images/main/logo.png" className="logo-img" alt="지오스토리" />
-            <img src="/assets/images/main/logo_color.png" className="logo-img--color" alt="지오스토리" />
-          </a>
+          <Link to="/" className="logo d-inline-flex align-items-center h-100">
+            <img src={logo} className="logo-img" alt="지오스토리" />
+          </Link>
 
-          {/* Navigation */}
           <Nav />
         </div>
       </div>
