@@ -7,7 +7,7 @@ export default function Nav() {
 
         <li className="nav-list__item">
           <Link to="/about/intro" className="link">
-            <span>소개</span>
+            <span>기업소개</span>
           </Link>
         </li>
 
@@ -31,7 +31,7 @@ export default function Nav() {
 
         <li className="nav-list__item">
           <Link to="/recruit/talent_recruitment" className="link">
-            <span>채용</span>
+            <span>인재채용</span>
           </Link>
         </li>
 

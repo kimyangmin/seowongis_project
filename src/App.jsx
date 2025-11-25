@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import About from "./pages/about/About";
 import Business from "./pages/business/Business";
 import Equipment from "./pages/equipment/Equipment";
-import Recruit from "./pages/recruit/Recruit";
+import Recruit from "./pages/recruit/Recruitment";
 import News from "./pages/news";    // index.jsx를 자동 인식
 
 
