@@ -201,21 +201,24 @@ ul, li {
   transition: max-height 0.35s ease, opacity 0.35s ease;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   z-index: 50;
+  border-bottom: 1px solid #eee;
 }
 
 /* 보여줄 때 */
 .mega-menu.show {
-  max-height: 500px;
+  max-height: 900px;
   opacity: 1;
   pointer-events: auto;
 }
 
-/* 내부 레이아웃 */
+/* MEGA MENU INNER - 여백 문제 해결 */
 .mega-menu-inner {
+  position: relative;
   display: flex;
   justify-content: space-between;
-  padding: 32px 0;
+  padding: 0 0 30px !important; /* 👈 아래 여백 확실하게 */
 }
+
 
 .mega-col {
   display: flex;
@@ -445,4 +448,425 @@ ul, li {
 .home-hero-text p {
   font-size: 18px;
   opacity: 0.9;
+}
+
+/* ================================================
+   HOME PAGE
+================================================ */
+
+/* ABOUT SECTION */
+.home-about {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.home-about h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.home-about p {
+  font-size: 18px;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  line-height: 1.7;
+}
+
+.btn-more {
+  display: inline-block;
+  padding: 12px 26px;
+  background: #0054a6;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: 0.25s;
+}
+
+.btn-more:hover {
+  background: #003f7e;
+}
+
+/* BUSINESS SECTION */
+.home-business {
+  background: #f8faff;
+  padding: 80px 0;
+}
+
+.home-business h2 {
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.business-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+}
+
+.business-card {
+  background: #fff;
+  padding: 30px 22px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.business-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.1);
+}
+
+.business-card .icon {
+  font-size: 42px;
+  margin-bottom: 14px;
+}
+
+.business-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.business-card p {
+  color: #666;
+}
+
+/* NEWS PREVIEW */
+.home-news {
+  padding: 80px 0;
+}
+
+.home-news h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.home-news-list li {
+  border-bottom: 1px solid #eee;
+  padding: 14px 0;
+}
+
+.home-news-list li a {
+  font-size: 18px;
+  color: #222;
+  transition: 0.25s;
+}
+
+.home-news-list li a:hover {
+  color: #0054a6;
+}
+
+/* ================================================
+   HOME HERO
+================================================ */
+
+.home-hero {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+}
+
+.home-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  filter: brightness(0.8);
+}
+
+.home-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 40, 90, 0.75) 0%,
+    rgba(0, 40, 90, 0.3) 45%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.home-hero-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+}
+
+.home-hero-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  margin-bottom: 18px;
+}
+
+.home-hero-inner h1 {
+  font-size: 40px;
+  line-height: 1.3;
+  margin: 0 0 16px;
+  font-weight: 800;
+}
+
+.home-hero-inner p {
+  font-size: 17px;
+  max-width: 520px;
+  margin: 0 0 26px;
+  color: #e5e9f2;
+}
+
+.home-hero-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* 버튼 공통 */
+.btn-primary,
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #0054a6;
+  color: #fff;
+  border-color: #0054a6;
+}
+
+.btn-primary:hover {
+  background: #003f79;
+  border-color: #003f79;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ================================================
+   STRIP STATS
+================================================ */
+
+.home-strip {
+  background: #0c2550;
+  color: #e9f0ff;
+}
+
+.home-strip-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 18px 0;
+}
+
+.home-strip-item {
+  flex: 1;
+  border-left: 1px solid rgba(255, 255, 255, 0.22);
+  padding-left: 18px;
+}
+
+.home-strip-item:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+.home-strip-item .label {
+  font-size: 12px;
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.home-strip-item strong {
+  font-size: 15px;
+}
+
+/* ================================================
+   HOME SECTIONS 공통
+================================================ */
+
+.home-section {
+  padding: 80px 0;
+}
+
+.home-section--light {
+  background: #f7f9fc;
+}
+
+.home-section--split {
+  background: #ffffff;
+}
+
+.home-section-header {
+  margin-bottom: 32px;
+}
+
+.home-section-header h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.home-section-header p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* ================================================
+   SERVICE CARDS
+================================================ */
+
+.home-service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.home-service-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 28px 24px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.home-service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.home-service-card .emoji {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.home-service-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.home-service-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.card-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0054a6;
+}
+
+/* ================================================
+   SPLIT SECTION (강점)
+================================================ */
+
+.home-split-inner {
+  display: flex;
+  gap: 40px;
+}
+
+.home-split-left {
+  flex: 1;
+}
+
+.home-split-left h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.home-split-left p {
+  color: #555;
+  line-height: 1.8;
+}
+
+.home-split-right {
+  flex: 1;
+}
+
+.home-split-right ul {
+  margin: 0;
+  padding: 0;
+}
+
+.home-split-right li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #444;
+}
+
+.home-split-right .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-top: 7px;
+  background: #0054a6;
+}
+
+/* ================================================
+   HOME NEWS PREVIEW
+================================================ */
+
+.home-news-preview {
+  background: #f7f7f7;
+}
+
+.home-news-list {
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+.home-news-list li {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.home-news-list li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 4px;
+  font-size: 16px;
+}
+
+.home-news-list .title {
+  flex: 1;
+}
+
+.home-news-list .date {
+  width: 110px;
+  text-align: right;
+  font-size: 14px;
+  color: #888;
+}
+
+.home-news-more {
+  margin-top: 18px;
 }
