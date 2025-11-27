@@ -870,3 +870,8 @@ ul, li {
 .home-news-more {
   margin-top: 18px;
 }
+
+.business-nav-item.active {
+  border-color: #4f7ad8;
+  background: #eef2ff;
+}
