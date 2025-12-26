@@ -207,7 +207,7 @@ ul, li {
 .mega-menu-inner {
   display: flex;
   justify-content: space-between;
-  padding: 32px 0;
+  padding: 22px 0 15px !important;
 }
 
 .mega-col {
